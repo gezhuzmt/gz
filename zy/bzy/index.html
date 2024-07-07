@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="聆听自然，放松心情" />
+		<meta name="description" content="聆听自然，放松心情" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<title>阁主带您聆听自然之音</title>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="full-screen" content="yes">
+		<meta name="browsermode" content="application">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="x5-page-mode" content="app">
+		<link rel="stylesheet" href="styles/main.css?ver=18">
+		<script>
+			var _hmt = _hmt || []; (function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?571d9c5101148874bc4510672444a0b2";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<canvas id="bg"></canvas>
+		<span class="setup active"></span>
+		<nav id="menu" class="visible">
+			<div class="row">
+				<div class="col">
+					<span class="icon icon-volume"></span>
+				</div>
+				<div class="col"></div>
+				<div class="col">
+					<span class="icon icon-list"></span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col"></div>
+				<div class="col">
+					<span class="icon icon-logo"></span>
+				</div>
+				<div class="col"></div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<span class="icon icon-timer"></span>
+					<section class="timer">
+						<span class="minute">
+							30
+						</span>
+						:
+						<span class="second">
+							00
+						</span>
+					</section>
+				</div>
+				<div class="col"></div>
+				<div class="col">
+					<span class="icon icon-exit"></span>
+				</div>
+			</div>
+			<div class="line-group">
+				<div class="line-1"></div>
+				<div class="line-2"></div>
+				<div class="line-3"></div>
+				<div class="line-4"></div>
+			</div>
+		</nav>
+		<section class="side-bar">
+			<div class="mask"></div>
+			<ul id="sound-list">
+				<li data-sound="rain">
+					<div class="sound-icon">
+						<span class="icon icon-rain"></span>
+					</div>
+					<div class="control-block">
+						<h4 class="title">
+							雨声
+							<small>
+								Rain
+							</small>
+						</h4>
+						<div class="control-bar">
+							<span class="slider"></span>
+						</div>
+					</div>
+					<audio preload="none" loop>
+						<source type="audio/ogg" src="./mp3/ys.mp3">
+							<source type="audio/mpeg" src="./mp3/ys.mp3"></audio>
+				</li>
+				<li data-sound="thunder">
+					<div class="sound-icon">
+						<span class="icon icon-thunder"></span>
+					</div>
+					<div class="control-block">
+						<h4 class="title">
+							雷声
+							<small>
+								Thunder
+							</small>
+						</h4>
+						<div class="control-bar">
+							<span class="slider"></span>
+						</div>
+					</div>
+					<audio preload="none" loop>
+						<source type="audio/ogg" src="./mp3/ls.mp3">
+							<source type="audio/mpeg" src="./mp3/ls.mp3"></audio>
+				</li>
+				<li data-sound="farm">
+					<div class="sound-icon">
+						<span class="icon icon-farm"></span>
+					</div>
+					<div class="control-block">
+						<h4 class="title">
+							农场
+							<small>
+								Farm
+							</small>
+						</h4>
+						<div class="control-bar">
+							<span class="slider"></span>
+						</div>
+					</div>
+					<audio preload="none" loop>
+						<source type="audio/ogg" src="./mp3/nc.mp3">
+							<source type="audio/mpeg" src="./mp3/nc.mp3"></audio>
+				</li>
+				<li data-sound="night">
+					<div class="sound-icon">
+						<span class="icon icon-night"></span>
+					</div>
+					<div class="control-block">
+						<h4 class="title">
+							夜晚
+							<small>
+								Night
+							</small>
+						</h4>
+						<div class="control-bar">
+							<span class="slider"></span>
+						</div>
+					</div>
+					<audio preload="none" loop>
+						<source type="audio/ogg" src="./mp3/yw.mp3">
+							<source type="audio/mpeg" src="./mp3/yw.mp3"></audio>
+				</li>
+				<li data-sound="forest">
+					<div class="sound-icon">
+						<span class="icon icon-forest"></span>
+					</div>
+					<div class="control-block">
+						<h4 class="title">
+							森林
+							<small>
+								Forest
+							</small>
+						</h4>
+						<div class="control-bar">
+							<span class="slider"></span>
+						</div>
+					</div>
+					<audio preload="none" loop>
+						<source type="audio/ogg" src="./mp3/sl.mp3">
+							<source type="audio/mpeg" src="./mp3/sl.mp3"></audio>
+				</li>
+				<li data-sound="rumor">
+					<div class="sound-icon">
+						<span class="icon icon-leaves"></span>
+					</div>
+					<div class="control-block">
+						<h4 class="title">
+							风声
+							<small>
+								Rumor
+							</small>
+						</h4>
+						<div class="control-bar">
+							<span class="slider"></span>
+						</div>
+					</div>
+					<audio preload="none" loop>
+						<source type="audio/ogg" src="./mp3/fs.mp3">
+							<source type="audio/mpeg" src="./mp3/fs.mp3"></audio>
+				</li>
+				<li data-sound="river">
+					<div class="sound-icon">
+						<span class="icon icon-river"></span>
+					</div>
+					<div class="control-block">
+						<h4 class="title">
+							河流
+							<small>
+								River
+							</small>
+						</h4>
+						<div class="control-bar">
+							<span class="slider"></span>
+						</div>
+					</div>
+					<audio preload="none" loop>
+						<source type="audio/ogg" src="./mp3/hl.mp3">
+							<source type="audio/mpeg" src="./mp3/hl.mp3"></audio>
+				</li>
+				<li data-sound="fire">
+					<div class="sound-icon">
+						<span class="icon icon-fire"></span>
+					</div>
+					<div class="control-block">
+						<h4 class="title">
+							篝火
+							<small>
+								Fire
+							</small>
+						</h4>
+						<div class="control-bar">
+							<span class="slider"></span>
+						</div>
+					</div>
+					<audio preload="none" loop>
+						<source type="audio/ogg" src="./mp3/gh.mp3">
+							<source type="audio/mpeg" src="./mp3/gh.mp3"></audio>
+				</li>
+				<li data-sound="seaside">
+					<div class="sound-icon">
+						<span class="icon icon-seaside"></span>
+					</div>
+					<div class="control-block">
+						<h4 class="title">
+							海边
+							<small>
+								Seaside
+							</small>
+						</h4>
+						<div class="control-bar">
+							<span class="slider"></span>
+						</div>
+					</div>
+					<audio preload="none" loop>
+						<source type="audio/ogg" src="./mp3/hb.mp3">
+							<source type="audio/mpeg" src="./mp3/hb.mp3"></audio>
+				</li>
+				<li data-sound="cuckoo">
+					<div class="sound-icon">
+						<span class="icon icon-yacht"></span>
+					</div>
+					<div class="control-block">
+						<h4 class="title">
+							布谷鸟
+							<small>
+								Cuckoo
+							</small>
+						</h4>
+						<div class="control-bar">
+							<span class="slider"></span>
+						</div>
+					</div>
+					<audio preload="none" loop>
+						<source type="audio/ogg" src="./mp3/bgn.mp3">
+							<source type="audio/mpeg" src="./mp3/bgn.mp3"></audio>
+				</li>
+				<li data-sound="bell">
+					<div class="sound-icon">
+						<span class="icon icon-coffee"></span>
+					</div>
+					<div class="control-block">
+						<h4 class="title">
+							风铃
+							<small>
+								Bell
+							</small>
+						</h4>
+						<div class="control-bar">
+							<span class="slider"></span>
+						</div>
+					</div>
+					<audio preload="none" loop>
+						<source type="audio/ogg" src="./mp3/fl.mp3">
+							<source type="audio/mpeg" src="./mp3/fl.mp3"></audio>
+				</li>
+				<li data-sound="train">
+					<div class="sound-icon">
+						<span class="icon icon-train"></span>
+					</div>
+					<div class="control-block">
+						<h4 class="title">
+							火车
+							<small>
+								Train
+							</small>
+						</h4>
+						<div class="control-bar">
+							<span class="slider"></span>
+						</div>
+					</div>
+					<audio preload="none" loop>
+						<source type="audio/ogg" src="./mp3/hc.mp3">
+							<source type="audio/mpeg" src="./mp3/hc.mp3"></audio>
+				</li>
+			</ul>
+		</section>
+		<script>
+			(function(window, document, undefined) {
+				'use strict';
+				var lastTime = 0,
+				vendors = ['ms', 'moz', 'webkit', 'o'],
+				i;
+				for (i = 0; i < vendors.length && !window.requestAnimationFrame; ++i) {
+					window.requestAnimationFrame = window[vendors[i] + 'RequestAnimationFrame'];
+					window.cancelAnimationFrame = window[vendors[i] + 'CancelAnimationFrame'] || window[vendors[i] + 'CancelRequestAnimationFrame'];
+				}
+				if (!window.requestAnimationFrame) {
+					window.requestAnimationFrame = function(callback) {
+						var currTime = new Date().getTime(),
+						timeToCall = Math.max(0, 16 - (currTime - lastTime)),
+						id = window.setTimeout(function() {
+							callback(currTime + timeToCall);
+						},
+						timeToCall);
+						lastTime = currTime + timeToCall;
+						return id;
+					};
+				}
+				if (!window.cancelAnimationFrame) {
+					window.cancelAnimationFrame = function(id) {
+						clearTimeout(id);
+					};
+				}
+			})(window, document);
+		</script>
+		<script src="javascripts/bg.js"></script>
+		<script src="javascripts/sound.js?v=2"></script>
+	</body>
+
+</html>
